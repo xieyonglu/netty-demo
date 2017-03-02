@@ -1,6 +1,6 @@
 package demo05;
 
-import demo02.TimeClientHandler;
+import demo06.TimeClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
