@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>netty-demo</groupId>
+	<artifactId>netty-demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>netty-demo</name>
+	<description>netty-demo</description>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+	</properties>
+
+	<modules>
+		<module>demo01</module>
+		<module>demo02</module>
+		<module>demo03</module>
+		<module>demo04</module>
+		<module>demo05</module>
+		<module>demo06</module>
+		<module>demo07</module>
+		<module>demo08</module>
+		<module>demo09</module>
+		<module>demo10</module>
+		<module>demo11</module>
+		<module>demo12</module>
+		<module>demo13</module>
+		<module>demo14</module>
+	</modules>
+
+	<dependencies>
+		<!-- spring framework -->
+		<!--<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>-->
+		
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>5.0.0.Alpha2</version>
+		</dependency>
+		
+	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Releases</name>
+			<url>http://localhost:8081/repository/maven-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Snapshot</name>
+			<url>http://localhost:8081/repository/maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<compilerArgs>
+						<arg>-parameters</arg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
