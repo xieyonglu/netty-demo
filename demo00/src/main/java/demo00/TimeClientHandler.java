@@ -1,13 +1,13 @@
-package demo06;
+package demo00;
 
 import java.util.logging.Logger;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
-public class TimeClientHandler extends ChannelHandlerAdapter {
+public class TimeClientHandler extends /*ChannelHandlerAdapter*/ChannelInboundHandlerAdapter {
 
 	private static final Logger logger = Logger.getLogger(TimeClientHandler.class.getName());
 
@@ -37,7 +37,7 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-		// ጷ��YԴ
+		// ጷ��YԴ
 		logger.warning("Unexpected exception from downstream: " + cause.getMessage());
 		ctx.close();
 	}
